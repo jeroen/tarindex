@@ -1,0 +1,26 @@
+{
+  "name": "tarindex",
+  "version": "1.0.0",
+  "description": "Index files in a tar, tar.gz, or tar.zst stream, recording filenames and byte offsets",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "bin": {
+    "tarindex": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "files": [
+    "index.js",
+    "bin/"
+  ],
+  "dependencies": {
+    "file-type": "^21.0.0",
+    "tar-stream": "^3.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
