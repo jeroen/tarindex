@@ -78,7 +78,7 @@ FS.mount(WORKERFS, { packages: [{ metadata, blob }] }, '/pkg');
 
 ## Embedding the index in the archive itself
 
-The `--append` flag embeds the index directly into the archive as a `.vfs-index.json` entry, followed by a 16-byte lookup hint. This produces a self-contained `.tar.gz` that can be mounted by [webR](https://docs.r-wasm.org/webr/latest/) without a separate metadata file:
+The `--append` flag embeds the index directly into the archive as a `.vfs-index.json` entry, followed by a 16-byte lookup hint. This produces a self-contained `.tar.gz` that can be mounted by [webR](https://docs.r-wasm.org/webr/latest/) without a separate metadata file (as described in [tar-metadata](https://r-wasm.github.io/rwasm/articles/tar-metadata.html)):
 
 ```sh
 npx tar-vfs-index --append archive.tar.gz          # modifies the file in-place
